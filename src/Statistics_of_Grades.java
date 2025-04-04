@@ -15,10 +15,10 @@ public class Statistics_of_Grades {
 
     //    To find maximum Grade
     public static int maximumGrade (int[] grades){
-        int maximumGrade = grades[0];
+        int maximumGrade = grades[0]; //set the default maximum grade to the first value in the array
         for(int i=0;i<grades.length-1;i++){
             if(maximumGrade<grades[i+1]){
-                maximumGrade = grades[i+1];
+                maximumGrade = grades[i+1];//find and stores the maximum Grade
             }
         }
         //the maximum grade of the class
@@ -27,10 +27,10 @@ public class Statistics_of_Grades {
 
     //To find minimum Grade
     public static int minimumGrade (int[] grades){
-        int minimumGrade = grades[0];
+        int minimumGrade = grades[0]; //set the default maximum grade to the first value in the array
         for(int i=0;i<grades.length-1;i++){
             if(minimumGrade>grades[i+1]){
-                minimumGrade = grades[i+1];
+                minimumGrade = grades[i+1];//find and stores the maximum Grade
             }
         }
         //the minimum grade of the class
@@ -39,9 +39,9 @@ public class Statistics_of_Grades {
 
     //To find average of Grades
     public static float averageGrade (int[] grades){
-        int sumOfGrades = 0;
+        int sumOfGrades = 0;//set the sum of all grades to 0
         for(int i=0;i<grades.length;i++){
-            sumOfGrades = sumOfGrades + grades[i];
+            sumOfGrades +=  grades[i];//calculate and store the sum of grades
         }
         float averageOfGrades =  (float) sumOfGrades /grades.length;
         //return the average grade of the class
@@ -51,7 +51,7 @@ public class Statistics_of_Grades {
     //Grades Distribution Array
     public static int[] gradeDistributionArray (int[] grades){
         //Grades Distribution Array
-        int[] stats = new int[5];
+        int[] stats = new int[5]; //set the size of stats to be 5
         int above80 = 0,above60=0,above40=0,above20=0,below20=0;
         for(int i=0;i<grades.length;i++){
             if (grades[i]>80){
@@ -76,22 +76,22 @@ public class Statistics_of_Grades {
             }
         }
         // return Grades Distribution Array
-        return stats;
+        return stats; //contains array to be used for graph
     }
 
     //Graph Representation
     public static void graph (int [] stats){
         //finding the y-axis for the graph, which is also the longest bar
-        int maximumHeight = stats[0];
+        int maximumHeight = stats[0]; //set the maximum height to be the first value
         for (int value : stats) {
             if (value > maximumHeight) {
                 //y-axis = maximumHeight
-                maximumHeight = value;
+                maximumHeight = value;// y-axis
             }
         }
         //Bar Graph Representation
         for (int i = maximumHeight; i > 0; i--){
-            System.out.printf("%3d >", i);
+            System.out.printf("%4d >", i);
             for (int stat : stats) {
                 if (stat >= i) {
                     System.out.print("  #######");
