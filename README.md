@@ -27,6 +27,14 @@ A simple yet powerful Java application that manipulates a list of student grades
 - **Error Handling**: Handles invalid inputs and edge cases
 
 ---
+## Screenshots
+
+**Input used**
+**{2,20, 21, 22, 23, 30, 48, 49, 50, 55, 60, 65, 72, 63, 76, 80, 68, 90, 85, 98}** (20 grades)
+
+![image](https://github.com/user-attachments/assets/29750df0-5f43-4cce-b854-f9742782b610)
+
+---
 
 ## 🚀 Getting Started
 
