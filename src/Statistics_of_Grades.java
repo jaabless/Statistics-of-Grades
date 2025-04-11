@@ -1,6 +1,18 @@
+import java.util.Scanner;
+
 public class Statistics_of_Grades {
     public static void main(String[] args) {
-        int[] grades = {2,20, 21, 22, 23, 30, 48, 49, 50, 55, 60, 65, 72, 63, 76, 80, 68, 90, 85, 98};
+//        int[] grades = {2,20, 21, 22, 23, 30, 48, 49, 50, 55, 60, 65, 72, 63, 76, 80, 68, 90, 85, 98};
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Please enter the number of students: ");
+        int numberofStudents = scanner.nextInt();
+        int[] grades = new int[numberofStudents];
+        for(int i=0;i<numberofStudents;i++){
+            System.out.print("Enter grade of student "+(i+1)+": ");
+            grades[i] = scanner.nextInt();
+        }
+        System.out.println();
 
         System.out.println("The maximum grade is: "+maximumGrade(grades));
         System.out.println("The minimum grade is: "+minimumGrade(grades));
