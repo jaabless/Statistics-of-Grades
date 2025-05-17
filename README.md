@@ -27,6 +27,7 @@ A simple yet powerful Java application that manipulates a list of student grades
 - **Error Handling**: Handles invalid inputs and edge cases
 
 ---
+
 ## Screenshots
 
 **Input used**
